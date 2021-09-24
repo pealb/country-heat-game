@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Country Heat Game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Country Heat Game</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="toggle-btn">
+            <img src="./assets/svg/right-arrow.svg" height="75%" alt="right-arrow" />
+        </div>
+        <h3>Beállítások</h3>
+        <div class="sidebar-container">
+            <label for="username">Felhasználónév</label>
+            <input class="username" name="username" type="text" placeholder="felhasználónév" disabled minlength="3" maxlength="20" />
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h1>Country Heat Game</h1>
+            <input type="text" placeholder="felhasználónév" class="username" minlength="3" maxlength="20" />
+            <button id="start-btn" disabled class="btn">Játék kezdése</button>
+            <div id="game-container">
+                <div class="points-container">
+                    <p id="points"></p>
+                    <p class="add">+100</p>
+                </div>
+                <p id="random-country"></p>
+                <p>Válassz egy országot, ahol melegebb van mint a fenti ország!</p>
+                <form>
+                    <select></select>
+                    <button id="compare-btn" class="btn">Mehet</button>
+                </form>
+            </div>
+            <div id="game-over">
+                <p></p>
+                <button id="restart-btn" class="btn">Újrakezdés</button>
+            </div>
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+        <div class="right">
+            <h2>Toplista</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Név</th>
+                        <th>Pontszám</th>
+                        <th>Dátum</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+</body>
+</html>
